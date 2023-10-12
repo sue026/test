@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>신입 웹퍼블리셔 이수경 포트폴리오</title>
+	<!--CSS-->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+<!--
+	Home, About, Portfolio, epilogue
+-->
+<div id="wrap">
+	<header>
+		<h1>LSK</h1>
+		<nav>
+			<ul>
+				<li><a href="#home">home</a></li>
+				<li><a href="#about">about me</a></li>
+				<li><a href="#portfolio">portfolio</a></li>
+				<li><a href="#epilogue">epilogue</a></li>
+			</ul>
+		</nav>		
+		<div class="header_btn">
+			<button class="nav_open">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+			<button class="nav_close">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+		</div>
+	</header>
+	<div id="aside_gnb">
+		<div class="menu_trigger">
+			<span></span>
+			<span></span>
+		</div>
+		<div class="tabs">
+			<button class="tab2">Portfolio2</button>
+			<button class="tab1">Contact1</button>
+		</div>
+		<div class="contents">
+			<div class="cont2">
+				<h2>Portfolio2</h2>
+				<dl>
+					<dt>UI/UX Design 
+						<div class="dt_trigger">
+							<span></span>
+							<span></span>
+						</div>					
+					</dt>
+						<dd>App UI 디자인</dd>
+						<dd>반응형웹 모바일 디자인</dd>				
+					<dt>Web Publishing 
+						<div class="dt_trigger">
+							<span></span>
+							<span></span>
+						</div>					
+					</dt>
+						<dd>맥도날드 메인페이지</dd>
+						<dd>영진출판사 반응형웹</dd>
+					<dt>Visual Design 
+						<div class="dt_trigger">
+							<span></span>
+							<span></span>
+						</div>					
+					</dt>
+						<dd>명함 디자인</dd>
+						<dd>포스터 디자인</dd>
+						<dd>옥외간판 디자인</dd>
+				</dl>
+			</div>
+			<div class="cont1">
+				<h2>Contact Me1</h2>
+				<dl>
+					<dt>이름</dt>
+					<dd>이수경</dd>
+					<dt>이메일</dt>
+					<dd>sue026@naver.com</dd>
+					<dt>연락처</dt>
+					<dd>02-123-1234</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<section id="home">
+		<div class="home_container">
+			<h2>안녕하세요</h2>
+			<p>신입 웹퍼블리셔 입니다.</p>
+		</div>
+	</section>
+	<section id="about">
+		<div class="container">
+			<h2>About Me</h2>
+			<!--
+				사진, 연락처(이메일), 툴스킬, 수상경력, 
+				업무경력, 간단한 인사말
+			-->
+		</div>
+	</section>
+	<section id="portfolio">
+		<div class="container">
+			<h2>Portfolio</h2>
+			<div class="tabs">
+				<ul>
+					<li class="tab1">Web Design</li>
+					<li class="tab2">Mobile UI/UX</li>
+					<li class="tab3">Visual Design</li>
+				</ul>
+			</div>
+			<div class="contents">
+				<div class="web_pf cont">
+					<ul>
+						<li><a href="web/jiran/index.html" target="_blank">
+							<span class="web_thum"></span>
+							<span class="web_tit">지란지교 시큐리티</span>
+							<span class="web_txt">
+								메인 페이지 퍼블리싱 연습
+							</span>
+						</a></li>
+						<li><a href="web/hancom/index.html" target="_blank">							
+							<span class="web_thum"></span>
+							<span class="web_tit">한글과 컴퓨터</span>
+							<span class="web_txt">
+								메인 페이지 퍼블리싱 연습
+							</span>
+						</a></li>
+						<li><a href="web/thinkbig/index.html" target="_blank">
+							<span class="web_thum"></span>
+							<span class="web_tit">웅진싱크빅</span>
+							<span class="web_txt">
+								메인 페이지 디자인 및 퍼블리싱 작업
+							</span>							
+						</a></li>
+						<li><a href="web/krispy/" target="_blank">	
+							<span class="web_thum"></span>
+							<span class="web_tit">크리스피 도넛</span>
+							<span class="web_txt">
+								메인 및 서브 페이지 퍼블리싱 연습
+							</span>
+						</a></li>
+					</ul>
+					<div class="web_controler">
+						<button></button>
+						<button></button>
+					</div>
+				</div>
+				<div class="uiux_pf cont">
+					<ul>
+						<li><span class="blind">따릉이 모바일앱 리디자인 작업</span></li>
+						<li>중고거래앱 "아나바다" ui 디자인 작업</li>
+					</ul>
+					<div class="uiux_controler">
+						<button class="prev_btn">
+							<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+						</button>
+						<button class="next_btn">
+							<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+				<div class="visual_pf cont">
+					<ul class="grid">
+						<li>
+							<a href="img/vis_thum_1.png" data-lightbox="vis_design">
+								<img src="img/vis_thum_1.png" alt="..">	
+							</a>
+						</li>
+						<li>
+							<a href="img/vis_thum_2.jpg" data-lightbox="vis_design">
+								<img src="img/vis_thum_2.jpg" alt="..">	
+							</a>
+						</li>
+						<li>
+							<a href="img/vis_thum_3.jpg" data-lightbox="vis_design">
+								<img src="img/vis_thum_3.jpg" alt="..">	
+							</a>
+						</li>
+						<li>
+							<a href="img/vis_thum_4.jpg" data-lightbox="vis_design">
+								<img src="img/vis_thum_4.jpg" alt="..">	
+							</a>
+						</li>
+						<li>
+							<a href="img/vis_thum_5.jpg" data-lightbox="vis_design">
+								<img src="img/vis_thum_5.jpg" alt="..">	
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="epilogue">
+		<div class="container">
+			<h2>Epilogue</h2>
+		</div>
+	</section>
+	<footer></footer>
+</div>
+</body>
+</html>
