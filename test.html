@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <style>
+    html {font-size: 10px;}
+    body {font-size: 20px;} 
+    h1 {font-size: 2em;color: red} /*20 x 2 = 40*/
+    section {font-size: 2em;}/* 20 x 2 = 40*/
+    .p1 {font-size: 2rem;} /*rem => root 기준 em*/
+    .p2 {font-size: 2em;} /*40 x 2 = 80*/
+    .p2 strong {font-size: 2rem;}/*80 x 2 = 160*/
+
+    /* 필기 예시 */
+
+    :root {font-size: 10px;}
+    #wrap {padding: 3rem;} /*30*/
+    @media screen and (max-width: 1280px) {
+      html {font-size: 8px;}
+      #wrap {padding: 3.2rem;} /*26*/
+    }
+    @media screen and (max-width: 430px) {
+      html {font-size: 6px;}
+      /*#wrap {padding: 3rem;} 18*/
+    }
+
+    .ex1 {display: none;}
+    .ex2 {
+      padding: 150px 100px;
+      background: #dedede;
+    }
+    .ex2 .tabmenu_wrap {border: 1px solid #000;}
+    .ex2 .tabs {
+      background: pink;
+      display: flex;flex-direction: row;
+      justify-content: center;gap: 40px;
+      padding: 40px;font-size: 26px;
+    }
+    .ex2 .tabs a {
+      padding: 10px 15px;
+    }
+    .ex2 .contents {
+      background: burlywood;padding: 50px;
+    }
+    .ex2 .contents .conbox {
+      border: 1px solid red;padding: 40px;
+      margin-bottom: 30px;display: none;
+    }
+    #con1 {background: dodgerblue;display: block;}
+    #con2 {background: slateblue;}
+    #con3 {background: teal;}
+    #con3 img {width: 200px;}
+    #con4 {background: hotpink;}
+    
+    .ex3 {
+      padding: 150px 0;
+    }
+    .ex3_container {
+      max-width: 1280px;margin: auto;padding: 0 30px;
+    }
+    .ex3 .footer1  {display: flex;justify-content: space-between;}
+    .ex3 .fam_site {border: 1px solid #333;}
+    .ex3 .fam_site ul {display: none;}
+
+    @media screen and (max-width: 840px) {
+      .ex3 {
+        background: #333; color: #FFF;
+      }
+      .ex3_container {
+        width: auto; 
+      }
+      .ex3 .footer1 {
+        flex-direction: column-reverse;gap: 30px;
+      }
+      .ex3 .fam_site {border: 1px solid #FFF;}
+    }
+  </style>
+</head>
+<body>
+  <div class="jiran_header">
+    <div class="jiran_container">
+      <h1><a href="#"><span class="blind">지란지교시큐리티</span></a></h1>
+      <nav id="gnb">
+        <ul class="dep1">
+          <li><a href="#">제품소개</a>
+            <ul class="dep2">
+              <li><a href="#">악성코드위협대응</a>
+                <ul class="dep3">
+                  <li><a href="#">새니톡스</a></li>
+                  <li><a href="#">머드픽스</a></li>
+                </ul>
+              </li>
+              <li><a href="#">메일보안</a>
+                <ul class="dep3">
+                  <li><a href="#">스팸스나이퍼</a></li>
+                  <li><a href="#">메일스크린</a></li>
+                  <li><a href="#">제이볼트플러스</a></li>
+                  <li><a href="#">클라우드메일게이트</a></li>
+                </ul>
+              </li>
+              <li><a href="#">문서보안</a>
+                <ul class="dep3">
+                  <li><a href="#">다큐원</a></li>
+                  <li><a href="#">오피스하드VEX</a></li>
+                </ul>
+              </li>
+              <li><a href="#">모바일보안</a>
+                <ul class="dep3">
+                  <li><a href="#">모바일키퍼</a></li>
+                  <li><a href="#">메일세이퍼</a></li>
+                </ul>
+              </li>
+              <li><a href="#">블록체인</a>
+                <ul class="dep3">
+                  <li><a href="#">제이볼트체인</a></li>
+                </ul>
+              </li>
+              <li><a href="#">문서검색</a>
+                <ul class="dep3">
+                  <li><a href="#">딥아이알</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">보안센터</a>
+            <ul class="dep2">
+              <li><a href="#">스팸메일 동향분석</a></li>
+              <li><a href="#">보안 라이브러리</a></li>
+            </ul>
+          </li>
+          <li><a href="#">홍보센터</a>
+            <ul class="dep2">
+              <li><a href="#">뉴스</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">홍보영상</a></li>
+              <li><a href="#">블로그</a></li>
+            </ul>
+          </li>
+          <li><a href="#">투자정보</a>
+            <ul class="dep2">
+              <li><a href="#">주가정보</a></li>
+              <li><a href="#">공시정보</a></li>
+              <li><a href="#">재무정보</a></li>
+              <li><a href="#">IR자료</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="ex2">
+    <h2>탭메뉴 구조</h2>
+    <div class="tabmenu_wrap">
+      <div class="tabs">
+        <a href="#" class="tab1">삼양라면</a>
+        <a href="#" class="tab2">닭볶음면</a>
+        <a href="#" class="tab3">맵탱</a>
+        <a href="#" class="tab4">잭앤펄스</a>
+      </div>
+      <div class="contents">
+        <div class="conbox" id="con1">
+          <ul>
+            <li>list-1</li>
+            <li>list-2</li>
+            <li>list-3</li>
+          </ul>
+        </div>
+        <div class="conbox" id="con2">
+          <p>sdkjflsdkjflskdjflsdkjf</p>
+          <p>sdkjflsdkjflskdjflsdkjf</p>
+        </div>
+        <div class="conbox" id="con3">
+          <img src="img/main/faculty_01_crop_auto_fix_600_853.52.png" alt="">
+        </div>
+        <div class="conbox" id="con4">
+          <ul>
+            <li>list-1</li>
+            <li>list-2</li>
+            <li>list-3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ex1">
+    <h1>헤딩 1 태그 입니다.</h1>
+    <section>
+      <p class="p1">p1 클래스를 가진 p 태그 입니다.</p>
+      <p class="p2">
+        p2 클래스를 가진 p 태그 입니다.
+        <strong>[strong 태그]</strong>
+      </p>
+    </section>
+  </div>
+
+  <div class="ex3">
+    <div class="ex3_container">
+      <div class="footer1">
+        <div class="footer_menu">
+          <a href="">개인정보처리방침</a>
+          <a href="">윤리경영</a>
+        </div>
+        <div class="fam_site">
+          <button>FAMILY SITE</button>
+          <ul>
+            <li><a href="#">지란지교소프트</a></li>
+            <li><a href="#">지란지교데이터</a></li>
+            <li><a href="#">지란지교파트너스</a></li>
+            <li><a href="#">지란재팬</a></li>
+            <li><a href="#">에스에스알</a></li>
+            <li><a href="#">모비젠</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.ex2 h2').style.color = 'blue';
+    document.querySelector('.ex2 h2').style.textDecoration = 'line-through';
+
+    let tab1 = document.querySelector('.tab1');
+    let tab2 = document.querySelector('.tab2');
+    let tab3 = document.querySelector('.tab3');
+    let tab4 = document.querySelector('.tab4');
+
+    tab1.addEventListener('click', function() {
+      document.querySelector('#con1').style.display = 'block';
+      document.querySelector('#con2').style.display = 'none';
+      document.querySelector('#con3').style.display = 'none';
+      document.querySelector('#con4').style.display = 'none';
+    })
+    tab2.addEventListener('click', function() {
+      document.querySelector('#con2').style.display = 'block';
+      document.querySelector('#con1').style.display = 'none';
+      document.querySelector('#con3').style.display = 'none';
+      document.querySelector('#con4').style.display = 'none';
+    })
+    tab3.addEventListener('click', function() {
+      document.querySelector('#con3').style.display = 'block';
+      document.querySelector('#con1').style.display = 'none';
+      document.querySelector('#con2').style.display = 'none';
+      document.querySelector('#con4').style.display = 'none';
+    })
+    tab4.addEventListener('click', function() {
+      document.querySelector('#con4').style.display = 'block';
+      document.querySelector('#con1').style.display = 'none';
+      document.querySelector('#con2').style.display = 'none';
+      document.querySelector('#con3').style.display = 'none';
+    })
+  </script>
+</body>
+</html>
